@@ -4,14 +4,17 @@ public class Course {
     private int corseId;
     private String title;
     private String description;
+
+    private String imageUrl;
     private String link;
 
     public Course() {
     }
 
-    public Course(String title, String description, String link) {
+    public Course(String title, String description, String imageUrl, String link) {
         this.title = title;
         this.description = description;
+        this.imageUrl = imageUrl;
         this.link = link;
     }
 
@@ -47,12 +50,21 @@ public class Course {
         this.link = link;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
     @Override
     public String toString() {
         return "Course{" +
                 "corseId=" + corseId +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
                 ", link='" + link + '\'' +
                 '}';
     }
